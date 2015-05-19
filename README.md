@@ -17,11 +17,11 @@ Once the above installation steps are done you may download the code in this rep
 
 The sychronization of the TMS system with the MRI scanner is determined by the user by creating the TMS_trig_data file (mentioned above) and after creating the TMS_trig_data file the user can compile the code and load it to the microcontroller by doing the following:
 
-(1) Open CCS.
+  (1) Open CCS.
 
-(2) Right-click on the Blinky project directory (under the Project Explorer tab).
+  (2) Right-click on the Blinky project directory (under the Project Explorer tab).
 
-(3) Click Run->Debug
+  (3) Click Run->Debug
 
 This will compile, erase and then load (flash) the code to the microcontroller. You must do this each time you run the code. 
 
