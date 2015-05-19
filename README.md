@@ -11,15 +11,21 @@ The code does the following (Specifics are documented with the code.):
 
 (IV) Schedules successive leading and trailing edges of the rest of the triggers in a train associated with a particular EPI volume. This is done by using using hardware interrupts associated with the real-time interrupt system of the microcontroller. See the rtiNotification() ISR in the sys_main.c file.
 
-To run the code you will need to install Code Composer Studio (CCS) on a PC. CCS is available free of cost through Texas Instruments at http://www.ti.com/tool/ccstudio. You will also need to install the F021 API (downloaded spnc033.zip from http://www.ti.com/tool/f021flashapi). Then add the location of the include files to the project by right-clicking on the project then clicking project Properties -> Build -> ARM Compiler-> Include Options. Under "Specify a preinclude file" add the path to the F021.h header file. The path will look something like: C:\ti\Hercules\F021 Flash API\02.01.00\include\F021.h . 
+To run the code you will need to install Code Composer Studio (CCS) on a PC. CCS is available free of cost through Texas Instruments at http://www.ti.com/tool/ccstudio. You will also need to install the F021 API (downloaded spnc033.zip from http://www.ti.com/tool/f021flashapi). Then add the location of the include files to the project by right-clicking on the project then clicking project Properties -> Build -> ARM Compiler-> Include Options. Under "Specify a preinclude file" add the path to the F021.h header file. The path will look something like: C:\ti\Hercules\F021 Flash API\02.01.00\include\F021.h and you should substitute the path to the F021.h file on your machine. 
 
-Once the above installation steps are done you may download the code in this repository, place it in the directory you have choosen for your project files (you will see this directory when you start up CCS) and load it to the microcontroller by doing the following:
+Once the above installation steps are done you may download the code in this repository and place it in the directory you have choosen for your project files (you will see this directory when you start up CCS). Then start CCS and go to Project -> Import CCS Projects and use the browser to locate and select the Blinky project folder. 
+
+The sychronization of the TMS system with the MRI scanner is determined by the user by creating the TMS_trig_data file (mentioned above) and after creating the TMS_trig_data file the user can compile the code and load it to the microcontroller by doing the following:
 
 (1) Open CCS.
-(2) Right-click on the project directory.
+
+(2) Right-click on the Blinky project directory (under the Project Explorer tab).
+
 (3) Click Run->Debug
 
-This will compile, erase and then load (flash) the code to the microcontroller. You must do this each time you run the code.
+This will compile, erase and then load (flash) the code to the microcontroller. You must do this each time you run the code. 
+
+Having compiled and loaded the code to the microcontroller you may then run the code by clicking the green arrow button in CCS. The code will then read the TMS_trig_data file and following completion of the read you should see a message that says "Ready to send triggers to TMS unit" appear in the CCS console. After seeing that message you can click the red box near the green arrow and you are ready to go. 
 
 
 
