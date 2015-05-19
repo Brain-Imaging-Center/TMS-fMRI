@@ -25,7 +25,7 @@ The sychronization of the TMS system with the MRI scanner is determined by the u
 
 This will compile, erase and then load (flash) the code to the microcontroller. You must do this each time you run the code. 
 
-Having compiled and loaded the code to the microcontroller you may then run the code by clicking the green arrow button in CCS. The code will then read the TMS_trig_data file and following completion of the read you should see a message that says "Ready to send triggers to TMS unit" appear in the CCS console. After seeing that message you can click the red box near the green arrow and you are ready to go. 
+Having compiled and loaded the code to the microcontroller you may then run the code by clicking the green arrow button in CCS gui. The code will then read the TMS_trig_data file and, following completion of the read, you should see a message that says "Ready to send triggers to TMS unit" appear in the CCS console. After seeing that message you can click the red box near the green arrow and you are ready to go. 
 
 
 
